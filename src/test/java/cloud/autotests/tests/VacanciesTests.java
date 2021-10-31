@@ -8,8 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
 
@@ -44,7 +43,7 @@ public class VacanciesTests extends TestBase{
                 $x("//a[@href='vacancies']").click());
 
         step("All Elements are appeared", () -> {
-            $x("//div[@class='vacancies']//div[@class='container']//h3").shouldBe(visible);
+            $x("//div[@class='vacancies']//div[@class='container']//h3").shouldBe(exist);
             $x("//div[@class='vacancies']//div[@id='carousel-vacancies']").shouldBe(visible);
             $x("//div[@class='vacancies']//div[@id='carousel-vacancies']//h4").shouldHave(text("Senior Java Developer"));
         });
