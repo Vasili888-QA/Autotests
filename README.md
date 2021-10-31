@@ -50,4 +50,4 @@ Get Allure Report
 ---
 
 Get Video Report
-![allureReport.png](src/test/resources/images/video1.gif)
+![allureReport.png](src/test/resources/images/video2.gif)
