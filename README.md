@@ -47,4 +47,4 @@ Run command on Terminal:
 Get Allure Report
 ![allureReport.png](src/test/resources/images/allureReport.png)
 
-![video1.gif](src/test/resources/images/video1.gif)
+<img src="src/test/resources/images/video1.gif" width="1732" height="877" alt>
