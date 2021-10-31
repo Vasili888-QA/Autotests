@@ -16,7 +16,6 @@ import static io.qameta.allure.Allure.step;
 @Feature("Elements on Page")
 @DisplayName("Page Elements")
 @Tag("regress")
-@Order(2)
 public class PageElementsTests extends TestBase {
     @Test
     @Description("Check Elements on the main page")

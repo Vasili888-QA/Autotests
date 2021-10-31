@@ -18,12 +18,11 @@ import static io.qameta.allure.Allure.step;
 @Feature("About Us")
 @DisplayName("About Us Page Elements")
 @Tag("regress")
-@Order(3)
 public class AboutUsTests extends TestBase{
     @Test
     @Description("Check Elements on the About Us Page")
     @DisplayName("All main elements are appeared")
-    @Order(1)
+    @Order(4)
     void elementsTest() {
         step("Open iFuture.by", () ->
                 open("https://www.ifuture.by/"));
