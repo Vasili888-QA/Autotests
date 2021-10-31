@@ -5,7 +5,6 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +23,6 @@ public class AboutUsTests extends TestBase{
     @Test
     @Description("Check Elements on the About Us Page")
     @DisplayName("All main elements are appeared")
-    @Order(4)
     void elementsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());

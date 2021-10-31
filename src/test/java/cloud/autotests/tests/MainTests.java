@@ -6,7 +6,6 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -24,8 +23,7 @@ public class MainTests extends TestBase {
     @Test
     @Description("Check title on the main page")
     @DisplayName("iFuture.by is appeared")
-    @Order(1)
-    void generatedTest() {
+    void generalTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());
 
@@ -40,7 +38,6 @@ public class MainTests extends TestBase {
     @Test
     @Description("Check console logs")
     @DisplayName("Page console log should not have errors")
-    @Order(2)
     void consoleShouldNotHaveErrorsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());
