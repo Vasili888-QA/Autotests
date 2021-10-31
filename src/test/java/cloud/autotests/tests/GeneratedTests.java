@@ -18,6 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("Elements on Page")
 @DisplayName("Title")
 @Tag("regress")
+@Order(1)
 public class GeneratedTests extends TestBase {
     @Test
     @Description("Check title on the main page")
