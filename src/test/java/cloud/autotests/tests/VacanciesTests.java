@@ -5,7 +5,6 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -15,16 +14,15 @@ import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
 
 @Epic("Check iFuture site")
-@Feature("2 - About Us")
-@DisplayName("About Us Page Elements")
+@Feature("3 - Vacancies")
+@DisplayName("Vacancies Page Elements")
 @Tag("regress")
-public class AboutUsTests extends TestBase{
+public class VacanciesTests extends TestBase{
     MainPage mainPage = new MainPage();
 
     @Test
-    @Description("Check Elements on the About Us Page")
+    @Description("Check Elements on the Vacancies Page")
     @DisplayName("All main elements are appeared")
-    @Order(4)
     void elementsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());
@@ -38,16 +36,17 @@ public class AboutUsTests extends TestBase{
             $x("//div[@id='menuToggle' and @class='active']").shouldBe(visible);
         });
 
-        step("Tab About Us is appeared", () -> {
-            $x("//a[@href='about']").shouldHave(text("О Нас"));
+        step("Tab Vacancies is appeared", () -> {
+            $x("//a[@href='vacancies']").shouldHave(text("Вакансии"));
         });
 
-        step("Click on About Us", () ->
-            $x("//a[@href='about']").click());
+        step("Click on Vacancies", () ->
+                $x("//a[@href='vacancies']").click());
 
         step("All Elements are appeared", () -> {
-            $x("//section[@class='advantages']//div[@class='container']//h3").shouldHave(text("Наши преимущества"));
-            $x("//section[@class='advantages']//div[@id='carousel-advantages']").shouldBe(visible);
+            $x("//div[@class='vacancies']//div[@class='container']//h3").shouldBe(visible);
+            $x("//div[@class='vacancies']//div[@id='carousel-vacancies']").shouldBe(visible);
+            $x("//div[@class='vacancies']//div[@id='carousel-vacancies']//h4").shouldHave(text("Senior Java Developer"));
         });
     }
 }
