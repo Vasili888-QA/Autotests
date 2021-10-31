@@ -45,6 +45,6 @@ Run command on Terminal:
 - Run Tests with @Tag("prod" / "regress") -->> _**gradle clean many_tags_tests**_
 
 Get Allure Report
-![img.png](src/test/resources/images/allureReport.png)
+![allureReport.png](src/test/resources/images/allureReport.png)
 
-![img_1.png](src/test/resources/images/allureReport.png)
+![video.gif](src/test/resources/images/video.gif)
