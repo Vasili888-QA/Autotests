@@ -41,13 +41,15 @@ ___
 Run command on Terminal:
 
 - Run All Tests on project -->> _**gradle clean test**_
-- Run Tests with @Tag("smoke") -->> _**gradle clean smoke_tests**_
-- Run Tests with @Tag("prod" / "regress") -->> _**gradle clean many_tags_tests**_
+- Run Tests with @Tag("smoke") -->> _**gradle clean regress_tests**_
 
 Get Allure Report
 ![allureReport.png](src/test/resources/images/allureReport.png)
 
 ---
+Telegram Notification
+![telegramReport](src/test/resources/images/telegramReport.png)
 
+---
 Get Video Report
 ![allureReport.png](src/test/resources/images/video2.gif)
