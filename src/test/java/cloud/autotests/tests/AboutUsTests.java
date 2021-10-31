@@ -1,5 +1,6 @@
 package cloud.autotests.tests;
 
+import cloud.autotests.tests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -19,13 +20,15 @@ import static io.qameta.allure.Allure.step;
 @DisplayName("About Us Page Elements")
 @Tag("regress")
 public class AboutUsTests extends TestBase{
+    MainPage mainPage = new MainPage();
+
     @Test
     @Description("Check Elements on the About Us Page")
     @DisplayName("All main elements are appeared")
     @Order(4)
     void elementsTest() {
         step("Open iFuture.by", () ->
-                open("https://www.ifuture.by/"));
+                mainPage.openMainPage());
 
         step("Main image is appeared 'iFuture'", () -> {
             $x("//h1//img[@alt='iFuture']").shouldBe(visible);

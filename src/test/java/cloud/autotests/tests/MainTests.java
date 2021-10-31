@@ -1,6 +1,7 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import cloud.autotests.tests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -18,14 +19,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("1 - Elements on Page")
 @DisplayName("Title")
 @Tag("regress")
-public class GeneratedTests extends TestBase {
+public class MainTests extends TestBase {
+    MainPage mainPage = new MainPage();
+
     @Test
     @Description("Check title on the main page")
     @DisplayName("iFuture.by is appeared")
     @Order(1)
     void generatedTest() {
         step("Open iFuture.by", () ->
-                open("https://www.ifuture.by/"));
+                mainPage.openMainPage());
 
         step("Page title should have text 'iFuture.by'", () -> {
             String expectedTitle = "iFuture.by";
@@ -41,7 +44,7 @@ public class GeneratedTests extends TestBase {
     @Order(2)
     void consoleShouldNotHaveErrorsTest() {
         step("Open iFuture.by", () ->
-                open("https://www.ifuture.by/"));
+                mainPage.openMainPage());
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
