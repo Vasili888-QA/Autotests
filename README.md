@@ -44,12 +44,15 @@ Run command on Terminal:
 
 ---
 <h2 align="center">Get Allure Report</h2>
+
 ![allureReport.png](src/test/resources/images/allureReport.png)
 
 ---
 <h2 align="center">Telegram Notification</h2>
+
 ![telegramReport](src/test/resources/images/telegramReport.png)
 
 ---
 <h2 align="center">Get Video Report</h2>
+
 ![allureReport.png](src/test/resources/images/video2.gif)
