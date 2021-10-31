@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Epic("Check iFuture site")
-@Feature("Elements on Page")
+@Feature("1 - Elements on Page")
 @DisplayName("Title")
 @Tag("regress")
 public class GeneratedTests extends TestBase {

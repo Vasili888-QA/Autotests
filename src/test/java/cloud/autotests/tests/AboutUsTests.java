@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Epic("Check iFuture site")
-@Feature("About Us")
+@Feature("2 - About Us")
 @DisplayName("About Us Page Elements")
 @Tag("regress")
 public class AboutUsTests extends TestBase{

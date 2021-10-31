@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Epic("Check iFuture site")
-@Feature("Elements on Page")
+@Feature("1 - Elements on Page")
 @DisplayName("Page Elements")
 @Tag("regress")
 public class PageElementsTests extends TestBase {
