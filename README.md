@@ -1,6 +1,6 @@
 # :point_down: Проект с автотестами для сайта iFuture.by
 
-<img src="src/test/resources/images/iFuture.png" width="1911" height="994" alt> 
+![iFuture.png](src/test/resources/images/iFuture.png)
 
 
 ___
