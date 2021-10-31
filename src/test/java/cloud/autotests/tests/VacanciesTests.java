@@ -45,7 +45,6 @@ public class VacanciesTests extends TestBase{
         step("All Elements are appeared", () -> {
             $x("//div[@class='vacancies']//div[@class='container']//h3").shouldBe(exist);
             $x("//div[@class='vacancies']//div[@id='carousel-vacancies']").shouldBe(visible);
-            $x("//div[@class='vacancies']//div[@id='carousel-vacancies']//h4").shouldHave(text("Senior Java Developer"));
         });
     }
 }
