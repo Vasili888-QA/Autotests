@@ -1,10 +1,9 @@
-# :point_down: Проект с автотестами для сайта iFuture.by
+# :point_down: Project with autoTests for iFuture.by
 
 ![iFuture.png](src/test/resources/images/iFuture.png)
 
-
 ___
-<h2 align="center">What I like to use...</h3>
+<h2 align="center">What I like to use...</h2>
 
 | Java | IntelliJ IDEA | Gradle | Maven | Junit5 | Selenide | Cucumber |
 |:------:|:----:|:----:|:------:|:------:|:------:|:------:|
@@ -43,13 +42,14 @@ Run command on Terminal:
 - Run All Tests on project -->> _**gradle clean test**_
 - Run Tests with @Tag("smoke") -->> _**gradle clean regress_tests**_
 
-Get Allure Report
+---
+<h2 align="center">Get Allure Report</h2>
 ![allureReport.png](src/test/resources/images/allureReport.png)
 
 ---
-Telegram Notification
+<h2 align="center">Telegram Notification</h2>
 ![telegramReport](src/test/resources/images/telegramReport.png)
 
 ---
-Get Video Report
+<h2 align="center">Get Video Report</h2>
 ![allureReport.png](src/test/resources/images/video2.gif)
