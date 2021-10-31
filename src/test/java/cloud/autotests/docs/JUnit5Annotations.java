@@ -2,11 +2,6 @@ package cloud.autotests.docs;
 
 import org.junit.jupiter.api.*;
 
-/*
-    JUnit5 annotations examples
-    Author: https://github.com/dtuchs
- */
-
 @Tag("junit5")
 public class JUnit5Annotations {
 
@@ -30,6 +25,7 @@ public class JUnit5Annotations {
         System.out.println("this is after all methods!");
     }
 
+/*
 //    @Test
     void firstTest() {
         System.out.println("this is the first @test!");
@@ -41,4 +37,6 @@ public class JUnit5Annotations {
         System.out.println("this is the second @test!");
         Assertions.assertTrue(true);
     }
+*/
+
 }

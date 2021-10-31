@@ -4,6 +4,8 @@ import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
@@ -16,7 +18,11 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 
-@Story("Login tests")
+@Epic("DemoWebShop")
+@Feature("Login Tests")
+@DisplayName("Login Tests")
+@Tag("regress")
+//@Story("Login tests")
 public class LoginTests extends TestBase {
 
     @BeforeAll

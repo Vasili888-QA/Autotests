@@ -1,15 +1,11 @@
 package cloud.autotests.docs;
 
-import org.openqa.selenium.By;
+/*
+ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
-
-/*
-    Locators examples
-    Author: https://github.com/svasenkov
- */
 
 public class CssXpathExamples {
 
@@ -63,3 +59,4 @@ public class CssXpathExamples {
         $(withText("lo qa.guru"));
     }
 }
+*/

@@ -1,5 +1,6 @@
 package cloud.autotests.docs;
 
+/*
 import com.codeborne.selenide.*;
 import org.openqa.selenium.Keys;
 
@@ -12,12 +13,6 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
-
-/*
-    Selenide commands examples
-    Author: https://github.com/vinogradoff
-    this is not a full list, just the most common
- */
 
 public class SelenideSnippets {
 
@@ -202,3 +197,4 @@ public class SelenideSnippets {
         long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
     }
 }
+*/
