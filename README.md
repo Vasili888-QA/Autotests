@@ -1,4 +1,4 @@
-# :point_down: Project with autoTests for iFuture.by
+<h1 align="center">:point_down: Project with autoTests for iFuture.by :point_down:</h1>
 
 ![iFuture.png](src/test/resources/images/iFuture.png)
 
