@@ -1,6 +1,6 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.tests.pages.MainPage;
+import cloud.autotests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Feature("2 - About Us")
 @DisplayName("About Us Page Elements")
 @Tag("regress")
-public class AboutUsTests extends TestBase{
+public class AboutUsTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test
@@ -25,11 +25,10 @@ public class AboutUsTests extends TestBase{
     @DisplayName("All main elements are appeared")
     void elementsTest() {
         step("Open iFuture.by", () ->
-                mainPage.openMainPage());
+            mainPage.openMainPage());
 
-        step("Main image is appeared 'iFuture'", () -> {
-            $x("//h1//img[@alt='iFuture']").shouldBe(visible);
-        });
+        step("Main image is appeared 'iFuture'", () ->
+            mainPage.mainImageIFuture());
 
         step("Open Menu navigation bar", () -> {
             $x("//div[@id='menuToggle']").click();

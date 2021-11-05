@@ -1,6 +1,6 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.tests.pages.MainPage;
+import cloud.autotests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
