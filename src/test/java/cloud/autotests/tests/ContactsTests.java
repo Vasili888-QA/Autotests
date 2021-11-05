@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 @Feature("4 - Contacts")
 @DisplayName("Contacts Page Elements")
 @Tag("regress")
-public class ContactsTests {
+public class ContactsTests extends TestBase {
     MainPage mainPage = new MainPage();
     ContactsPage contactsPage = new ContactsPage();
 
