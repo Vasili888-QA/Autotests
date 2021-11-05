@@ -1,5 +1,6 @@
 package cloud.autotests.tests;
 
+import cloud.autotests.pages.AboutUsPage;
 import cloud.autotests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -8,9 +9,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
 
 @Epic("Check iFuture site")
@@ -19,32 +17,28 @@ import static io.qameta.allure.Allure.step;
 @Tag("regress")
 public class AboutUsTests extends TestBase {
     MainPage mainPage = new MainPage();
+    AboutUsPage aboutUsPage = new AboutUsPage();
 
     @Test
     @Description("Check Elements on the About Us Page")
     @DisplayName("All main elements are appeared")
     void elementsTest() {
         step("Open iFuture.by", () ->
-            mainPage.openMainPage());
+                mainPage.openMainPage());
 
         step("Main image is appeared 'iFuture'", () ->
-            mainPage.mainImageIFuture());
+                mainPage.mainImageIFuture());
 
-        step("Open Menu navigation bar", () -> {
-            $x("//div[@id='menuToggle']").click();
-            $x("//div[@id='menuToggle' and @class='active']").shouldBe(visible);
-        });
+        step("Open Menu navigation bar", () ->
+                mainPage.openNavigationBarAndCheckIt());
 
-        step("Tab About Us is appeared", () -> {
-            $x("//a[@href='about']").shouldHave(text("О Нас"));
-        });
+        step("Tab About Us is appeared", () ->
+                aboutUsPage.tabAboutUs());
 
         step("Click on About Us", () ->
-            $x("//a[@href='about']").click());
+                aboutUsPage.clickTabAboutUs());
 
-        step("All Elements are appeared", () -> {
-            $x("//section[@class='advantages']//div[@class='container']//h3").shouldHave(text("Наши преимущества"));
-            $x("//section[@class='advantages']//div[@id='carousel-advantages']").shouldBe(visible);
-        });
+        step("All Elements are appeared", () ->
+                aboutUsPage.elementsPageAboutUs());
     }
 }

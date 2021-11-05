@@ -8,8 +8,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Epic("Check iFuture site")
@@ -26,12 +24,10 @@ public class PageElementsTests extends TestBase {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());
 
-        step("Main image is appeared 'iFuture'", () -> {
-            $x("//h1//img[@alt='iFuture']").shouldBe(visible);
-        });
+        step("Main image is appeared 'iFuture'", () ->
+                mainPage.mainImageIFuture());
 
-        step("Menu navigation bar is appeared", () -> {
-            $x("//div[@id='menuToggle']").shouldBe(visible);
-        });
+        step("Menu navigation bar is appeared", () ->
+                mainPage.menuNavigationBar());
     }
 }
