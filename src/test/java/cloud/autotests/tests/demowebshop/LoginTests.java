@@ -6,7 +6,6 @@ import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Cookie;
@@ -22,7 +21,6 @@ import static io.restassured.RestAssured.given;
 @Feature("Login Tests")
 @DisplayName("Login Tests")
 @Tag("regress")
-//@Story("Login tests")
 public class LoginTests extends TestBase {
 
     @BeforeAll
@@ -33,7 +31,7 @@ public class LoginTests extends TestBase {
 
     @Test
     @Tag("demowebshop")
-    @Disabled("Example test code for further test development")
+//    @Disabled("Example test code for further test development")
     @DisplayName("Successful authorization to some demowebshop (UI)")
     void loginTest() {
         step("Open login page", () ->
@@ -51,7 +49,7 @@ public class LoginTests extends TestBase {
 
     @Test
     @Tag("demowebshop")
-    @Disabled("Example test code for further test development")
+//    @Disabled("Example test code for further test development")
     @DisplayName("Successful authorization to some demowebshop (API + UI)")
     void loginWithCookieTest() {
         step("Get cookie by api and set it to browser", () -> {
