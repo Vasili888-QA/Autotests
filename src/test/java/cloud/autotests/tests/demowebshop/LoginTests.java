@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
 
 @Epic("DemoWebShop")
 @Feature("Login Tests")
@@ -31,7 +32,7 @@ public class LoginTests extends TestBase {
 
     @Test
     @Tag("demowebshop")
-//    @Disabled("Example test code for further test development")
+//    @Disabled("Example")
     @DisplayName("Successful authorization to some demowebshop (UI)")
     void loginTest() {
         step("Open login page", () ->
@@ -49,7 +50,6 @@ public class LoginTests extends TestBase {
 
     @Test
     @Tag("demowebshop")
-//    @Disabled("Example test code for further test development")
     @DisplayName("Successful authorization to some demowebshop (API + UI)")
     void loginWithCookieTest() {
         step("Get cookie by api and set it to browser", () -> {
@@ -80,4 +80,43 @@ public class LoginTests extends TestBase {
         step("Verify successful authorization", () ->
                 $(".account").shouldHave(text(App.config.userLogin())));
     }
+
+    @Test
+    @Tag("demowebshop")
+    @DisplayName("Add product to Wishlist (API + UI)")
+    void addProductToWishlistTest() {
+        step("Get cookie by api and set it to browser", () -> {
+            String authorizationCookie =
+                    given()
+                            .filter(AllureRestAssuredFilter.withCustomTemplates())
+                            .contentType("application/x-www-form-urlencoded; charset=UTF-8")
+                            .formParam("Email", App.config.userLogin())
+                            .formParam("Password", App.config.userPassword())
+                            .when()
+                            .post("/login")
+                            .then()
+                            .statusCode(302)
+                            .extract()
+                            .cookie("NOPCOMMERCE.AUTH");
+
+            step("Open minimal content, because cookie can be set when site is opened", () ->
+                    open("/Themes/DefaultClean/Content/images/logo.png"));
+
+            step("Set cookie to to browser", () ->
+                    getWebDriver().manage().addCookie(
+                            new Cookie("NOPCOMMERCE.AUTH", authorizationCookie)));
+        });
+
+        step("Add product to Wishlist", () -> {
+                    given()
+                            .filter(AllureRestAssuredFilter.withCustomTemplates())
+                            .contentType("application/x-www-form-urlencoded; charset=UTF-8")
+                            .formParam("EnteredQuantity", 1)
+                            .when()
+                            .post("/addproducttocart/details/14/2")
+                            .then()
+                            .statusCode(200)
+                            .body("success", is(true),
+                                    "updatetopwishlistsectionhtml", is("(1)"));});
+   }
 }
