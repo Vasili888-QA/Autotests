@@ -4,6 +4,7 @@ import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.RestAssured;
@@ -16,6 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 
 @Epic("DemoWebShop")
@@ -118,5 +120,14 @@ public class LoginTests extends TestBase {
                             .statusCode(200)
                             .body("success", is(true),
                                     "updatetopwishlistsectionhtml", is("(1)"));});
+
+        step("Open Wishlist page", () ->{
+                given()
+                            .get("/wishlist")
+                            .then()
+                            .statusCode(200);});
+
+                open("/wishlist");
+                Selenide.$x("//span[@class='wishlist-qty']").shouldHave(text("(1)"));
    }
 }
