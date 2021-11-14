@@ -62,7 +62,7 @@ public class LoginTests extends TestBase {
                             .when()
                             .post("/login")
                             .then()
-                            .statusCode(200)
+                            .statusCode(302)
                             .extract()
                             .cookie("NOPCOMMERCE.AUTH");
 
