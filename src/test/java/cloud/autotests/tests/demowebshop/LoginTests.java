@@ -5,6 +5,7 @@ import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.RestAssured;
@@ -32,6 +33,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5997")
     @Tag("demowebshop")
 //    @Disabled("Example")
     @DisplayName("Successful authorization to some demowebshop (UI)")
@@ -50,6 +52,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5996")
     @Tag("demowebshop")
     @DisplayName("Successful authorization to some demowebshop (API + UI)")
     void loginWithCookieTest() {
@@ -83,6 +86,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5995")
     @Tag("demowebshop")
     @DisplayName("Add product to Wishlist (API + UI)")
     void addProductToWishlistTest() {

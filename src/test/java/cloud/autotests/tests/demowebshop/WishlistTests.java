@@ -3,6 +3,7 @@ package cloud.autotests.tests.demowebshop;
 import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
@@ -24,7 +26,42 @@ import static org.hamcrest.Matchers.is;
 @Tag("regress")
 public class WishlistTests {
     @Test
+    @Tag("demowebshop")
+    @AllureId("6004")
+    @DisplayName("Successful authorization to some demowebshop (API + UI)")
+    void loginWithCookieTest() {
+        step("Get cookie by api and set it to browser", () -> {
+            String authorizationCookie =
+                    given()
+                            .filter(AllureRestAssuredFilter.withCustomTemplates())
+                            .contentType("application/x-www-form-urlencoded; charset=UTF-8")
+                            .formParam("Email", App.config.userLogin())
+                            .formParam("Password", App.config.userPassword())
+                            .when()
+                            .post("/login")
+                            .then()
+                            .statusCode(302)
+                            .extract()
+                            .cookie("NOPCOMMERCE.AUTH");
+
+            step("Open minimal content, because cookie can be set when site is opened", () ->
+                    open("/Themes/DefaultClean/Content/images/logo.png"));
+
+            step("Set cookie to to browser", () ->
+                    getWebDriver().manage().addCookie(
+                            new Cookie("NOPCOMMERCE.AUTH", authorizationCookie)));
+        });
+
+        step("Open main page", () ->
+                open(""));
+
+        step("Verify successful authorization", () ->
+                $(".account").shouldHave(text(App.config.userLogin())));
+    }
+
+    @Test
     @Story("Add product to Wishlist")
+    @AllureId("6003")
     @Tag("demowebshop")
     @DisplayName("Add product to Wishlist (API + UI)")
     void addProductToWishlistTest() {
