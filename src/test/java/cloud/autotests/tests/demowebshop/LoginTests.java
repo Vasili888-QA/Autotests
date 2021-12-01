@@ -5,6 +5,7 @@ import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.restassured.RestAssured;
@@ -17,7 +18,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 
 @Epic("DemoWebShop")
@@ -33,6 +33,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5997")
     @Tag("demowebshop")
 //    @Disabled("Example")
     @DisplayName("Successful authorization to some demowebshop (UI)")
@@ -51,6 +52,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5996")
     @Tag("demowebshop")
     @DisplayName("Successful authorization to some demowebshop (API + UI)")
     void loginWithCookieTest() {
@@ -84,6 +86,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5995")
     @Tag("demowebshop")
     @DisplayName("Add product to Wishlist (API + UI)")
     void addProductToWishlistTest() {
