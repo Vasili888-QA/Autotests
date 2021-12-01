@@ -48,6 +48,11 @@ Run command on Terminal:
 ![allureReport.png](src/test/resources/images/allureReport.png)
 
 ---
+<h2 align="center">Integration with test management system "Allure TestOps"</h2>
+
+![allureReport.png](src/test/resources/images/AllureTestOps.png)
+
+---
 <h2 align="center">Telegram Notification</h2>
 
 ![telegramReport](src/test/resources/images/telegramReport.png)
