@@ -21,10 +21,10 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
 @Epic("DemoWebShop")
-@Feature("Login Tests")
-@DisplayName("Login Tests")
+@Feature("All Tests on Demo Web Shop site")
+@DisplayName("All Tests on DemoWebShop site")
 @Tag("regress")
-public class LoginTests extends TestBase {
+public class DemoWebShopTests extends TestBase {
 
     @BeforeAll
     static void configureBaseUrl() {
@@ -36,7 +36,7 @@ public class LoginTests extends TestBase {
     @AllureId("5997")
     @Tag("demowebshop")
 //    @Disabled("Example")
-    @DisplayName("Successful authorization to some demowebshop (UI)")
+    @DisplayName("Successful authorization on DemoWebShop (UI)")
     void loginTest() {
         step("Open login page", () ->
                 open("/login"));
@@ -54,7 +54,7 @@ public class LoginTests extends TestBase {
     @Test
     @AllureId("5996")
     @Tag("demowebshop")
-    @DisplayName("Successful authorization to some demowebshop (API + UI)")
+    @DisplayName("Successful authorization on DemoWebShop (API + UI)")
     void loginWithCookieTest() {
         step("Get cookie by api and set it to browser", () -> {
             String authorizationCookie =
@@ -112,7 +112,7 @@ public class LoginTests extends TestBase {
                             new Cookie("NOPCOMMERCE.AUTH", authorizationCookie)));
         });
 
-        step("Add product to Wishlist", () -> {
+        step("Add product to Wishlist by API", () -> {
                     given()
                             .filter(AllureRestAssuredFilter.withCustomTemplates())
                             .contentType("application/x-www-form-urlencoded; charset=UTF-8")

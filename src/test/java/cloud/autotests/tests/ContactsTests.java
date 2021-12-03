@@ -21,7 +21,7 @@ public class ContactsTests extends TestBase {
 
     @Test
     @Description("Check Elements on the Contacts Page")
-    @DisplayName("All main elements are appeared")
+    @DisplayName("All main elements on page Contacts are appeared")
     void elementsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());
