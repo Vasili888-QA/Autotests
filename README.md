@@ -37,20 +37,19 @@ ___
 <h6 align="right">From Minsk with :sparkling_heart:  at iFuture</h6>
 
 
-Run command on Terminal:
+## :computer: Run command on Terminal:
 
-- Run All Tests on project -->> _**gradle clean test**_
-- Run Tests with @Tag("smoke") -->> _**gradle clean regress_tests**_
-
-## :computer: Запуск тестов из терминала
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from console with filled remote.properties:*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from terminal with filled remote.properties:*
 
 ```bash
 gradle clean test
+
+or 
+
+gradle clean regress_tests
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from console without filled remote.properties:*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from terminal without filled remote.properties:*
 
 ```bash
 gradle clean test 
@@ -74,7 +73,7 @@ Where:
 >- [x] *DaccountPassword - Account password for tests*
 >- [x] *DbaseUrl - Base URL*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from console with a few threads:*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from terminal with a few threads:*
 
 ```bash
 gradle clean test -Dthreads=[threadsValue]
@@ -94,7 +93,7 @@ allure serve build/allure-results
 ---
 <h2 align="center">Integration with test management system "Allure TestOps"</h2>
 
-![allureReport.png](src/test/resources/images/Allure-Test-Ops.png)
+![allureReport.png](src/test/resources/images/Allure-Test-Ops.jpg)
 
 ---
 <h2 align="center">Integration with bug tracking system "Jira"</h2>
