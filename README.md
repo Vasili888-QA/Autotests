@@ -103,7 +103,7 @@ allure serve build/allure-results
 ---
 <h2 align="center">Telegram Notification</h2>
 
-![telegramReport](src/test/resources/images/telegramReport.png)
+![telegramReport](src/test/resources/images/telegram-Report.png)
 
 ---
 <h2 align="center">Get Video Report</h2>
