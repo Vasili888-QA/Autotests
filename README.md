@@ -42,6 +42,50 @@ Run command on Terminal:
 - Run All Tests on project -->> _**gradle clean test**_
 - Run Tests with @Tag("smoke") -->> _**gradle clean regress_tests**_
 
+## :computer: Запуск тестов из терминала
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from console with filled remote.properties:*
+
+```bash
+gradle clean test
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from console without filled remote.properties:*
+
+```bash
+gradle clean test 
+  -Dbrowser=[BROWSER]
+  -DbrowserVersion=[BROWSER_VERSION]
+  -DbrowserSize=[BROWSER_SIZE]
+  -DremoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@[REMOTE_DRIVER_URL]/wd/hub/
+  -DvideoStorage=https://[REMOTE_DRIVER_URL]/video/
+  -Dthreads=[THREADS]
+  -DaccountPassword=[ACCOUNT_PASSWORD]
+  -DbaseUrl=[BASE_URL]
+```
+
+Where:
+>- [x] *Dbrowser - Browser type, default value Chrome*
+>- [x] *DbrowserVersion - Browser version, default value 91.0*
+>- [x] *DbrowserSize - Browser window size, default value 1920x1080*
+>- [x] *DremoteDriverUrl - Remote server Selenoid with login and password, default value https://[selenoidUser]:[selenoidPwd]@selenoid.autotests.cloud/wd/hub/*
+>- [x] *DvideoStorage - Video storage on Selenoid, default value https://selenoid.autotests.cloud/video/*
+>- [x] *Dthreads - Quantity of threads, default value 1*
+>- [x] *DaccountPassword - Account password for tests*
+>- [x] *DbaseUrl - Base URL*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Run tests from console with a few threads:*
+
+```bash
+gradle clean test -Dthreads=[threadsValue]
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Make Allure report:*
+
+```bash
+allure serve build/allure-results
+```
+
 ---
 <h2 align="center">Get Allure Report</h2>
 
@@ -51,6 +95,11 @@ Run command on Terminal:
 <h2 align="center">Integration with test management system "Allure TestOps"</h2>
 
 ![allureReport.png](src/test/resources/images/AllureTestOps.png)
+
+---
+<h2 align="center">Integration with bug tracking system "Jira"</h2>
+
+![allureReport.png](src/test/resources/images/JiraIntegration.png)
 
 ---
 <h2 align="center">Telegram Notification</h2>
