@@ -94,7 +94,7 @@ allure serve build/allure-results
 ---
 <h2 align="center">Integration with test management system "Allure TestOps"</h2>
 
-![allureReport.png](src/test/resources/images/AllureTestOps.png)
+![allureReport.png](src/test/resources/images/Allure-Test-Ops.png)
 
 ---
 <h2 align="center">Integration with bug tracking system "Jira"</h2>
