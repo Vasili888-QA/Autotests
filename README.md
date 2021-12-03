@@ -1,3 +1,9 @@
+
+<a align="center" href="https://komarev.com/ghpvc/?username=daramirra&style=flat&color=9152C0&label=Hello%20Visitors!">
+  <img src="https://komarev.com/ghpvc/?username=Vasili888-QA&style=flat&color=9152C0&label=Hello%20Visitors!"/>
+</a>
+
+
 <h1 align="center">:point_down: Project with autoTests for iFuture.by :point_down:</h1>
 
 ![iFuture.png](src/test/resources/images/iFuture.png)
