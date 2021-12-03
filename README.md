@@ -94,7 +94,7 @@ allure serve build/allure-results
 ---
 <h2 align="center">Get Allure Report</h2>
 
-![allureReport.png](src/test/resources/images/allureReport.png)
+![allureReport.png](src/test/resources/images/allure-Report.png)
 
 ---
 <h2 align="center">Integration with test management system "Allure TestOps"</h2>
