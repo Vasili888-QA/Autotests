@@ -19,7 +19,7 @@ public class PageElementsTests extends TestBase {
 
     @Test
     @Description("Check Elements on the main page")
-    @DisplayName("All main elements are appeared")
+    @DisplayName("All main elements on header are appeared")
     void elementsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());

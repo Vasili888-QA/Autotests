@@ -21,7 +21,7 @@ public class AboutUsTests extends TestBase {
 
     @Test
     @Description("Check Elements on the About Us Page")
-    @DisplayName("All main elements are appeared")
+    @DisplayName("All main elements on page About Us are appeared")
     void elementsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());

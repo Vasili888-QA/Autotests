@@ -21,7 +21,7 @@ public class VacanciesTests extends TestBase {
 
     @Test
     @Description("Check Elements on the Vacancies Page")
-    @DisplayName("All main elements are appeared")
+    @DisplayName("All main elements on page Vacancies are appeared")
     void elementsTest() {
         step("Open iFuture.by", () ->
                 mainPage.openMainPage());
