@@ -2,12 +2,15 @@ package cloud.autotests.tests.demowebshop;
 
 import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
+import cloud.autotests.helpers.allureAnnotations.Layer;
+import cloud.autotests.helpers.allureAnnotations.Microservice;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Cookie;
@@ -20,6 +23,8 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
+@Microservice("Shop")
+@Owner("Vasili")
 @Epic("DemoWebShop")
 @Feature("All Tests on Demo Web Shop site")
 @DisplayName("All Tests on DemoWebShop site")
@@ -32,6 +37,8 @@ public class DemoWebShopTests extends TestBase {
         Configuration.baseUrl = App.config.webUrl();
     }
 
+    @Layer("WEB")
+    @Order(1)
     @Test
     @AllureId("5997")
     @Tag("demowebshop")
@@ -51,6 +58,8 @@ public class DemoWebShopTests extends TestBase {
                 $(".account").shouldHave(text(App.config.userLogin())));
     }
 
+    @Layer("API")
+    @Order(2)
     @Test
     @AllureId("5996")
     @Tag("demowebshop")
@@ -86,6 +95,8 @@ public class DemoWebShopTests extends TestBase {
     }
 
     @Test
+    @Layer("API")
+    @Order(3)
     @AllureId("5995")
     @Tag("demowebshop")
     @DisplayName("Add product to Wishlist (API + UI)")

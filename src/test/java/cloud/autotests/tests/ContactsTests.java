@@ -1,16 +1,22 @@
 package cloud.autotests.tests;
 
+import cloud.autotests.helpers.allureAnnotations.Layer;
+import cloud.autotests.helpers.allureAnnotations.Microservice;
 import cloud.autotests.pages.ContactsPage;
 import cloud.autotests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Layer("WEB")
+@Microservice("HR")
+@Owner("Vasili")
 @Epic("Check iFuture site")
 @Feature("4 - Contacts")
 @DisplayName("Contacts Page Elements")
