@@ -36,6 +36,7 @@ public class DemoWebShopTests extends TestBase {
     }
 
     @Layer("WEB")
+    @Order(1)
     @Test
     @AllureId("5997")
     @Tag("demowebshop")
@@ -56,6 +57,7 @@ public class DemoWebShopTests extends TestBase {
     }
 
     @Layer("API")
+    @Order(2)
     @Test
     @AllureId("5996")
     @Tag("demowebshop")
@@ -90,8 +92,9 @@ public class DemoWebShopTests extends TestBase {
                 $(".account").shouldHave(text(App.config.userLogin())));
     }
 
-    @Layer("API")
     @Test
+    @Layer("API")
+    @Order(3)
     @AllureId("5995")
     @Tag("demowebshop")
     @DisplayName("Add product to Wishlist (API + UI)")
