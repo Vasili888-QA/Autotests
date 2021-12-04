@@ -2,7 +2,8 @@ package cloud.autotests.tests.demowebshop;
 
 import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
-import cloud.autotests.helpers.Layer;
+import cloud.autotests.helpers.allureAnnotations.Layer;
+import cloud.autotests.helpers.allureAnnotations.Microservice;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -21,6 +22,7 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
+@Microservice("Shop")
 @Epic("DemoWebShop")
 @Feature("All Tests on Demo Web Shop site")
 @DisplayName("All Tests on DemoWebShop site")

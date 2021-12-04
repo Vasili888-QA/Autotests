@@ -1,6 +1,7 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.helpers.Layer;
+import cloud.autotests.helpers.allureAnnotations.Layer;
+import cloud.autotests.helpers.allureAnnotations.Microservice;
 import cloud.autotests.pages.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 @Layer("WEB")
+@Microservice("Management")
 @Epic("Check iFuture site")
 @Feature("1 - Elements on Page")
 @DisplayName("Page Elements")
