@@ -10,6 +10,7 @@ import com.codeborne.selenide.Selenide;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Cookie;
@@ -23,6 +24,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
 @Microservice("Shop")
+@Owner("Vasili")
 @Epic("DemoWebShop")
 @Feature("All Tests on Demo Web Shop site")
 @DisplayName("All Tests on DemoWebShop site")
