@@ -2,6 +2,7 @@ package cloud.autotests.tests.demowebshop;
 
 import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
+import cloud.autotests.helpers.Layer;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -32,6 +33,7 @@ public class DemoWebShopTests extends TestBase {
         Configuration.baseUrl = App.config.webUrl();
     }
 
+    @Layer("WEB")
     @Test
     @AllureId("5997")
     @Tag("demowebshop")
@@ -51,6 +53,7 @@ public class DemoWebShopTests extends TestBase {
                 $(".account").shouldHave(text(App.config.userLogin())));
     }
 
+    @Layer("API")
     @Test
     @AllureId("5996")
     @Tag("demowebshop")
@@ -85,6 +88,7 @@ public class DemoWebShopTests extends TestBase {
                 $(".account").shouldHave(text(App.config.userLogin())));
     }
 
+    @Layer("API")
     @Test
     @AllureId("5995")
     @Tag("demowebshop")

@@ -1,5 +1,6 @@
 package cloud.autotests.tests;
 
+import cloud.autotests.helpers.Layer;
 import cloud.autotests.pages.ContactsPage;
 import cloud.autotests.pages.MainPage;
 import io.qameta.allure.Description;
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Layer("WEB")
 @Epic("Check iFuture site")
 @Feature("4 - Contacts")
 @DisplayName("Contacts Page Elements")

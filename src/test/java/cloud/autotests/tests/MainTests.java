@@ -1,6 +1,7 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import cloud.autotests.helpers.Layer;
 import cloud.autotests.pages.MainPage;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
@@ -14,6 +15,7 @@ import static com.codeborne.selenide.Selenide.title;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Layer("WEB")
 @Epic("Check iFuture site")
 @Feature("1 - Elements on Page")
 @DisplayName("Title")
