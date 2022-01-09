@@ -61,6 +61,7 @@ public class CssXpathExamples {
         //ignore spaces in XPATH
         //resource - http://autopract.com/selenium/normalize.html
         //YuoTube - https://www.youtube.com/watch?v=tVVaTmkL3Vk
+        //site - https://www.programsbuzz.com/article/selenium-normalize-space-function-xpath
         $x("//div[normalize-space(text())='space in between']");
         $x("//div[contains(normalize-space(),'programs buzz')]");
         $x("//div[contains(normalize-space(@class),'my class 2')]");
