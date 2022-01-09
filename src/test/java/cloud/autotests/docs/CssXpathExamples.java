@@ -57,6 +57,13 @@ public class CssXpathExamples {
         // <div>Hello qa.guru</div>
         $(byText("Hello qa.guru"));
         $(withText("lo qa.guru"));
+
+        //ignore spaces in XPATH
+        //resource - http://autopract.com/selenium/normalize.html
+        //YuoTube - https://www.youtube.com/watch?v=tVVaTmkL3Vk
+        $x("//div[normalize-space(text())='space in between']");
+        $x("//div[contains(normalize-space(),'programs buzz')]");
+        $x("//div[contains(normalize-space(@class),'my class 2')]");
     }
 }
 */
