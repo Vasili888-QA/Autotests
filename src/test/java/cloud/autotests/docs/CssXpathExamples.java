@@ -1,7 +1,7 @@
 package cloud.autotests.docs;
 
 /*
- import org.openqa.selenium.By;
+import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -54,17 +54,24 @@ public class CssXpathExamples {
         // </div>
         $("input.inputtext .login_form_input_box");
 
-        // <div>Hello qa.guru</div>
-        $(byText("Hello qa.guru"));
-        $(withText("lo qa.guru"));
+        // <div>Hello</div>
+        $(byText("Hello"));
+        $(withText("lo"));
+
+        //Other -> https://devhints.io/xpath#operators
+        $x("//product[@price > 2.50]");
+        $x("//ul[count(li) > 2]");
+        $x("//ul[count(li[@class='hide']) > 0]");
 
         //ignore spaces in XPATH
         //resource - http://autopract.com/selenium/normalize.html
         //YuoTube - https://www.youtube.com/watch?v=tVVaTmkL3Vk
         //site - https://www.programsbuzz.com/article/selenium-normalize-space-function-xpath
+        $x("//h3[contains(text(),'searchText')]");
         $x("//div[normalize-space(text())='space in between']");
         $x("//div[contains(normalize-space(),'programs buzz')]");
         $x("//div[contains(normalize-space(@class),'my class 2')]");
+        $x("//div[contains(concat(' ',normalize-space(@class),' '),' foobar ')]");
     }
 }
 */
